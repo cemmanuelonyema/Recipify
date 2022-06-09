@@ -1,0 +1,5 @@
+@import "../../../../sassStyles/abstract/mixins";
+
+.sidebar {
+  @include areaSetUp;
+}
