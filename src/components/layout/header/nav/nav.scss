@@ -9,39 +9,12 @@
 //   align-self: stretch;
 //   margin-right: 2.5rem;
 
-//   &__list {
-//     list-style: none;
-//     display: flex;
-//     height: 100%;
-//   }
-
 //   &__item {
 //     position: relative;
 //   }
 
-//   &__btn {
-//     height: 100%;
-//     font-family: inherit;
-//     color: inherit;
-//     font-size: 1.4rem;
-//     font-weight: 700;
-//     text-transform: uppercase;
-//     background: none;
-//     border: none;
-//     cursor: pointer;
-//     padding: 0 1.5rem;
-//     transition: all 0.3s;
-
 //     display: flex;
 //     align-items: center;
-
-//     svg {
-//       //   height: 2.4rem;
-//       //   width: 2.4rem;
-//       //   fill: $color-primary;
-//       //   margin-right: 0.7rem;
-//       //   transform: translateY(-1px);
-//     }
 
 //     &:focus {
 //       outline: none;
@@ -94,4 +67,37 @@
 
 .nav {
   @include areaSetUp;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+  }
+
+  &__btn {
+    font-size: 1.4rem;
+    font-family: inherit;
+    color: var(--dark);
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    // height: 100%;
+    padding: 1.5rem;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: var(--color-grey-light-2);
+      border-radius: 1rem;
+    }
+  }
+
+  &__icon {
+    fill: var(--color-primary);
+    //   margin-right: 0.7rem;
+    //   transform: translateY(-1px);
+  }
 }

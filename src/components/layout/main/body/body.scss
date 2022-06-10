@@ -1,6 +1,7 @@
 @import "../../../../sassStyles/abstract/mixins";
 .body {
   @include areaSetUp;
+  //   background-color: #e0f5e7;
 
   flex: 1;
 }

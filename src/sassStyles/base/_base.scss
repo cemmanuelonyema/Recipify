@@ -11,4 +11,21 @@
 
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Poppins", "Gill Sans", sans-serif;
+}
+body {
+  font-size: 1.6rem;
+}
+button,
+input {
+  background: none;
+  border: none;
+}
+
+svg {
+  height: 2.25rem;
+  width: 2.25rem;
+  fill: currentColor;
+  margin-right: 1rem;
 }
