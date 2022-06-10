@@ -1,7 +1,10 @@
 @import "../../../../sassStyles/abstract/mixins";
 
 .header {
-  @include areaSetUp;
+  //   @include areaSetUp;
+  //   max-width: 120rem;
+  margin: auto;
+  padding: 2rem;
   background-color: #f0faf3;
   display: flex;
   align-items: center;
