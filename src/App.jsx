@@ -1,15 +1,14 @@
 import React, { Fragment } from "react";
 import "./App.module.scss";
-import Body from "./components/layout/body/Body";
 import Header from "./components/layout/header/head/Header";
-import Sidebar from "./components/layout/sidebar/side/Sidebar";
+import Main from "./components/layout/main/Main";
+import Footer from "./components/layout/footer/Footer";
 
 const App = () => {
   return (
     <Fragment>
       <Header />
-      <Sidebar />
-      <Body />
+      <Main />
     </Fragment>
   );
 };

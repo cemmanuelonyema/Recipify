@@ -1,5 +1,6 @@
 @import "../../../../sassStyles/abstract/mixins";
-
-.footer {
+.body {
   @include areaSetUp;
+
+  flex: 1;
 }
