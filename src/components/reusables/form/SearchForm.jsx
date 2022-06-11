@@ -1,16 +1,29 @@
-import React from "react";
-import InputField from "./inputfield/InputField";
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import "./searchForm.scss";
 
-const SearchForm = () => {
+const SearchForm = ({ placeholder, searchRecipe }) => {
+  const [inputText, setInputText] = useState("");
+
+  const handleChange = (e) => setInputText(e.target.value);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    searchRecipe(inputText);
+    setInputText("");
+  };
+
   return (
-    <form className="form">
-      {/* <input
+    <form className="form" onSubmit={handleSubmit}>
+      <input
+        name="text"
         type="text"
+        id="search"
         className="form__input"
-        placeholder="Search over 1,000,000 recipes..."
-      /> */}
-      <InputField />
+        value={inputText}
+        onChange={handleChange}
+        placeholder={placeholder}
+      />
 
       <button className="btn form__btn" type="search">
         <svg className="search__icon">
@@ -20,6 +33,15 @@ const SearchForm = () => {
       </button>
     </form>
   );
+};
+
+SearchForm.defaultProps = {
+  placeholder: "Search over 1,000,000 recipes...",
+};
+
+SearchForm.proptypes = {
+  placeholder: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
 };
 
 export default SearchForm;

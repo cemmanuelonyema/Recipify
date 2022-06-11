@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./inputfield.scss";
 
 const InputField = () => {
+  const [inputText, setInputText] = useState("");
   const handleChange = (e) => setInputText(e.target.value);
 
   return (
