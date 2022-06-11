@@ -12,7 +12,6 @@ const SearchForm = ({ placeholder, searchRecipe }) => {
     searchRecipe(inputText);
     setInputText("");
   };
-
   return (
     <form className="form" onSubmit={handleSubmit}>
       <input
@@ -39,7 +38,7 @@ SearchForm.defaultProps = {
   placeholder: "Search over 1,000,000 recipes...",
 };
 
-SearchForm.proptypes = {
+SearchForm.propTypes = {
   placeholder: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
 };
