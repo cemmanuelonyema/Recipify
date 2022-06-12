@@ -1,6 +1,5 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { Fragment } from "react";
 import axios from "axios";
-import "./App.module.scss";
 import Header from "./components/layout/header/head/Header";
 import Main from "./components/layout/main/Main";
 
