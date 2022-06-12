@@ -8,16 +8,16 @@ const App = () => {
   const [loading, setLoading] = useState(false);
 
   const searchRecipes = async () => {
-    setLoading(true);
-    const res = await axios.get(
-      `https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886`
-    );
-    const { recipe } = res.data.data;
-    setRecipeData(recipe);
-    console.log(recipeData);
+    //     setLoading(true);
+    //     const res = await axios.get(
+    //       `https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886`
+    //     );
+    //     const { recipe } = res.data.data;
+    //     setRecipeData(recipe);
+    //     console.log(recipeData);
   };
 
-  searchRecipes();
+  //   searchRecipes();
   return (
     <Fragment>
       <Header searchRecipes={searchRecipes} />
