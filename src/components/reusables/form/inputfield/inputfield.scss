@@ -1,0 +1,15 @@
+@import "../../../../sassStyles/abstract/mixins";
+
+input {
+  @include inherit;
+  font-size: 1.6rem;
+  width: 30rem;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: var(--color-grey-light-3);
+  }
+}
