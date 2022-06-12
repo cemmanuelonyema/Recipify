@@ -40,7 +40,7 @@ SearchForm.defaultProps = {
 
 SearchForm.propTypes = {
   placeholder: PropTypes.string.isRequired,
-  handleChange: PropTypes.func.isRequired,
+  //   handleChange: PropTypes.func.isRequired,
 };
 
 export default SearchForm;

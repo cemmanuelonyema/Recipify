@@ -1,32 +1,28 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import axios from "axios";
 import "./App.module.scss";
 import Header from "./components/layout/header/head/Header";
 import Main from "./components/layout/main/Main";
 
 const App = () => {
-  const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
-
-  const searchRecipes = async (text) => {
-    setLoading(true);
-    // const res = await axios
-    //   .get
-    //   //   `https://forkify-api.herokuapp.com/api/v2/recipes/${id}`
-    //   ();
-    // const data = res.data.data.recipe;
-    setData(data);
-    setLoading(false);
-    console.log(text);
+  const searchRecipes = async () => {
+    const res = await axios.get(
+      `https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886`
+    );
+    const { recipe } = res.data.data;
+    console.log(res.data.data);
+    console.log(recipe);
   };
 
-  const searchRecipe = () => {};
+  searchRecipes();
   return (
     <Fragment>
-      <Header searchRecipe={searchRecipes} />
+      <Header searchRecipes={searchRecipes} />
       <Main />
     </Fragment>
   );
 };
+
+// search;
 
 export default App;
